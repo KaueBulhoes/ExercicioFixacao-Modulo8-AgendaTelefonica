@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Telefônica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/agenda.png" alt="agenda telefônica">
+            <h1>Agenda Telefônica</h1>
+        </header>
+        <form id="form-contato">
+            <input type="text" id="nome-contato" required placeholder="Nome do Contato">
+            <input type="tel" id="tel-contato" required placeholder="(xx)xxxx-xxxx" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"><!--Estudar RegEx-->
+            <button type="submit">Adicionar</button>
+        </form>
+        <table cellspacing="0"><!--por padrão vem com um separador entre as bordas, fica visível ao adicionar uma linha, esse comando serve para sumir com esse separador-->
+            <thead> <!--cabeçalho da tabela-->
+                <tr> <!--linha da tabela-->
+                    <th id="contato"> <!--coluna da tabela-->Contato <img src="./images/contato.png" alt="imagem de uma pessoa"> </th>
+                    <th id="telefone">Telefone <img src="./images/telefone.png" alt="imagem de telefone"> </th>
+                </tr>
+            </thead>
+            <tbody><!--corpo da tabela-->
+                <!--ao fazer o javascript, esse conteúdo pode ser retirado, na fase de implementação serve para visualização-->
+                <!--<tr> 
+                    <td>Atividade 01</td>
+                    <td>7</td>
+                    <td><img src="./images/aprovado.png" alt=""></td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
